@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Раздобреева](https://up.htmlacademy.ru/adaptive/20/user/200637).
-* Наставник: [Мария Коршунова] (https://htmlacademy.ru/profile/masha_mk).
+* Наставник: [Мария Коршунова](https://htmlacademy.ru/profile/masha_mk).
 
 ---
 
