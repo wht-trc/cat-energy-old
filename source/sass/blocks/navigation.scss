@@ -1,0 +1,36 @@
+.navigation {
+  background-color: $bg-content;
+}
+
+.navigation__list {
+  @include list-decoration();
+}
+
+.navigation__item {
+  padding: 20px 0;
+}
+
+.navigation__link {
+  display: block;
+  text-align: center;
+
+  @include oswald-parameters($nav-size, 20px, 500, $title-color);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+    text-decoration: underline $button-color;
+  }
+}
+
+.navigation__open {
+  display: none;
+}
+
+.navigation__close {
+  display: none;
+}

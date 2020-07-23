@@ -1,0 +1,21 @@
+.details {
+  padding: 20px 20px;
+  background-color: $bg-content;
+}
+
+.details__title {
+  margin: 0;
+  padding: 0;
+
+  @include oswald-parameters($title-size, 40px, 400, $title-color);
+
+  text-transform: none;
+}
+
+.details__list {
+  @include list-decoration();
+}
+
+.details__text {
+  @include arial-parameters($text-size, 18px, 400, $text-color);
+}

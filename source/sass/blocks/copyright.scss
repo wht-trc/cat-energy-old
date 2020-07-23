@@ -1,0 +1,21 @@
+.copyright__link {
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  cursor: pointer;
+}
+
+.copyright__text {
+  @include arial-parameters(16px,  16px, 400, $text-color);
+}
+
+.copyright__logo {
+  display: block;
+  margin-top: -10px;
+}

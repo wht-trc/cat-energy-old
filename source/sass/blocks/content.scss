@@ -1,0 +1,31 @@
+.content {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $bg-content;
+}
+
+.content__promo {
+  padding-bottom: 20px;
+}
+
+.content__programs {
+  padding-bottom: 20px;
+}
+
+.content__details {
+  padding-bottom: 20px;
+}
+
+.content__title {
+  margin: 0;
+  padding: 20px 20px;
+  padding-bottom: 40px;
+
+  @include oswald-parameters($title-size, $title-size, 400, $title-color);
+
+  text-transform: none;
+}
+
+.content__catalog {
+  padding-bottom: 20px;
+}
