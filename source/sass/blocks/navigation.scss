@@ -16,6 +16,8 @@
 
   @include oswald-parameters($nav-size, 20px, 500, $title-color);
 
+  font-weight: bold;
+
   &:hover,
   &:focus {
     opacity: 0.6;
