@@ -1,0 +1,22 @@
+.footer {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 35px;
+  background-color: $basic-grey;
+
+  text-align: center;
+}
+
+.footer__logo {
+  padding: 0 20px;
+}
+
+.footer__social {
+  padding: 0 20px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}

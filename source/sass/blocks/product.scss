@@ -1,0 +1,52 @@
+.product {
+  background-color: $bg-content;
+}
+
+.product__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product__name {
+  margin: 0;
+  padding: 0;
+
+  @include oswald-parameters(16px, 20px, 400, $product-color);
+}
+
+.product__name--show {
+  text-align: center;
+  color: $logo-text-color;
+}
+
+.product__details {
+  @include arial-parameters(12px, 16px, 400, $product-color);
+
+  text-align: center;
+}
+
+.product__table th {
+  text-align: left;
+}
+
+.product__button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.product__button--show {
+  color: $text-color;
+  background-color: $basic-grey;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: #b9b9b9;
+    background-color: #ebebeb;
+  }
+}
