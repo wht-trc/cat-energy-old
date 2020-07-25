@@ -1,0 +1,15 @@
+.additional {
+  padding: 0 20px;
+  background-color: $bg-content;
+}
+
+.additional__title {
+  @include oswald-parameters(24px, 24px, 400, $title-color);
+
+  text-transform: none;
+}
+
+.additional__product {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

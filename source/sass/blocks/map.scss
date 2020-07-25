@@ -1,0 +1,21 @@
+.map {
+  margin-bottom: -5px;
+  background-color: $bg-content;
+}
+
+.map__text {
+  display: flex;
+  padding: 20px 20px;
+}
+
+.map__text--inner {
+  background-color: $basic-grey;
+}
+
+.map__invitation {
+  @include oswald-parameters(16px, 18px, 400, $logo-text-color);
+}
+
+.map__adress {
+  @include arial-parameters($text-size, 20px, 400, $text-color);
+}

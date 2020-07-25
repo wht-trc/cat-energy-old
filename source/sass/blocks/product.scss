@@ -21,9 +21,13 @@
 }
 
 .product__details {
-  @include arial-parameters(12px, 16px, 400, $product-color);
+  @include arial-parameters(12px, 16px, 400, $text-color);
 
   text-align: center;
+}
+
+.product__details--additional {
+  @include arial-parameters(14px, 14px, 400, $text-color);
 }
 
 .product__table th {

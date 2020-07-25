@@ -1,0 +1,81 @@
+.form {
+  background-color: $bg-content;
+}
+
+.form__fieldset {
+  margin: 30px 0;
+  padding: 0;
+  border: 0;
+}
+
+.form__legend {
+  padding: 20px 0;
+
+  @include oswald-parameters(24px, 26px, 400, $title-color);
+
+  text-transform: none;
+}
+
+.form__list {
+  @include list-decoration();
+}
+
+.form__item {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form__label {
+  padding-right: 15px;
+
+  @include oswald-parameters(16px, 18px, 400, $text-color);
+
+  white-space: nowrap;
+}
+
+.form__label--checkbox {
+  color: $title-color;
+}
+
+.form__text::placeholder,
+.form__email::placeholder,
+.form__tel::placeholder,
+.form__textarea::placeholder {
+  @include oswald-parameters(16px, 18px, 400, $text-color);
+}
+
+.form__text {
+  border-color: #e7e7e7;
+  width: 100%;
+  height: 45px;
+  outline: 0;
+}
+
+.form__email {
+  border-color: #e7e7e7;
+  width: 100%;
+  height: 45px;
+  outline: 0;
+}
+
+.form__tel {
+  border-color: #e7e7e7;
+  width: 100%;
+  height: 45px;
+  outline: 0;
+}
+
+.form__textarea {
+  width: 280px;
+  height: 150px;
+  border-color: #e7e7e7;
+  outline: 0;
+}
+
+.form__button {
+  margin-left: 0;
+  width: 278px;
+  outline: 0;
+}

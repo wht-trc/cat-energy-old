@@ -1,0 +1,23 @@
+.results {
+  display: flex;
+  justify-content: space-around;
+}
+
+.results__parameter {
+  display: flex;
+  flex-direction: column;
+}
+
+.results__quantity {
+  padding-bottom: 10px;
+
+  @include oswald-parameters(24px, 24px, 400, $title-color);
+
+  text-align: center;
+}
+
+.results__index {
+  @include arial-parameters(12px, 12px, 400, $text-color);
+
+  text-align: center;
+}
