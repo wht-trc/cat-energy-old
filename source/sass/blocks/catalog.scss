@@ -1,8 +1,25 @@
 .catalog {
-  padding: 0 20px;
+  display: grid;
+  grid-template-columns: auto;
   background-color: $bg-content;
 }
 
 .catalog__product {
-  padding: 20px 0;
+  padding: 20px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    grid-template-columns: auto auto;
+    gap: 60px;
+    padding: 20px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    grid-template-columns: auto auto auto auto;
+    gap: 80px;
+    padding: 20px 110px;
+  }
 }

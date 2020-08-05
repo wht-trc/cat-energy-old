@@ -6,6 +6,7 @@
 .details__title {
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
 
   @include oswald-parameters($title-size, 40px, 400, $title-color);
 
@@ -13,9 +14,54 @@
 }
 
 .details__list {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+
   @include list-decoration();
 }
 
 .details__text {
+  margin: 0;
+  padding: 0;
+
   @include arial-parameters($text-size, 18px, 400, $text-color);
+}
+
+@media (min-width: $tablet-width) {
+  .details {
+    padding: 30px 30px;
+  }
+
+  .details__title {
+    padding-bottom: 75px;
+
+    @include oswald-parameters(60px, 60px, 400, $title-color);
+
+    text-transform: none;
+  }
+
+  .details__list {
+    grid-template-columns: auto auto;
+    gap: 80px;
+  }
+
+  .details__text {
+    @include arial-parameters(16px, 24px, 400, $text-color);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .details {
+    padding: 30px 110px;
+  }
+
+  .details__title {
+    padding-bottom: 70px;
+  }
+
+  .details__list {
+    grid-template-columns: auto auto auto auto;
+    gap: 80px;
+  }
 }

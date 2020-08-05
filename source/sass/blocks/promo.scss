@@ -1,6 +1,7 @@
 .promo {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 195px;
-  width: 320px;
   height: 285px;
   background-color: $button-color;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -26,4 +27,69 @@
   padding-bottom: 25px;
 
   @include oswald-parameters($text-size, $text-size, 400, $bg-content);
+}
+
+.promo__img {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    margin: 0 auto;
+    padding: 0 30px;
+    height: auto;
+    background-color: $bg-content;
+    background-image: none;
+  }
+
+  .promo__title {
+    padding-left: 80px;
+
+    @include oswald-parameters(60px, 60px, 400, $title-color);
+
+    text-transform: none;
+    text-align: left;
+  }
+
+  .promo__text {
+    padding-left: 80px;
+
+    @include oswald-parameters(20px, 20px, 400, $title-color);
+
+    text-align: left;
+  }
+
+  .promo__button {
+    margin-top: 35px;
+    margin-left: 80px;
+    padding: 15px 0;
+    width: 240px;
+
+    @include oswald-parameters(20px, 20px, 400, #ffffff);
+
+    z-index: 2;
+  }
+
+  .promo__img {
+    order: 2;
+    margin-top: -80px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    margin: 0 auto;
+    margin-top: -110px;
+    padding: 0 110px;
+    height: auto;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: 720px 696px;
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+
+  .promo__title {
+    margin-top: 210px;
+  }
 }

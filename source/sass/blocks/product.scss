@@ -1,5 +1,16 @@
 .product {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
   background-color: $bg-content;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.product__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  //align-items: flex-end;
 }
 
 .product__img {
@@ -8,20 +19,31 @@
   margin-right: auto;
 }
 
+.product__text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
 .product__name {
   margin: 0;
   padding: 0;
+  padding-right: 70px;
+  padding-bottom: 20px;
 
   @include oswald-parameters(16px, 20px, 400, $product-color);
 }
 
-.product__name--show {
+.product__name--bonus {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
   text-align: center;
   color: $logo-text-color;
 }
 
 .product__details {
-  @include arial-parameters(12px, 16px, 400, $text-color);
+  @include arial-parameters(12px, 12px, 400, $text-color);
 
   text-align: center;
 }
@@ -30,8 +52,17 @@
   @include arial-parameters(14px, 14px, 400, $text-color);
 }
 
+.product__table {
+  margin: 0;
+  padding: 0;
+}
+
 .product__table th {
   text-align: left;
+}
+
+.prosuct__table td {
+  text-align: right;
 }
 
 .product__button {
@@ -39,7 +70,8 @@
   margin-right: 0;
 }
 
-.product__button--show {
+.product__button--bonus {
+  margin-top: 20px;
   color: $text-color;
   background-color: $basic-grey;
 
@@ -52,5 +84,76 @@
   &:active {
     color: #b9b9b9;
     background-color: #ebebeb;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    padding-left: 0;
+    padding-right: 0;
+    width: 324px;
+    background-color: $basic-grey;
+    border: none;
+  }
+
+  .product--bonus {
+    background-color: $bg-content;
+    border: 2px solid $basic-grey;
+  }
+
+  .product__description {
+    flex-direction: column;
+  }
+
+  .product__text {
+    padding-left: 40px;
+    padding-right: 36px;
+  }
+
+  .product__name {
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 20px;
+    width: 150px;
+
+    @include oswald-parameters(20px, 24px, 400, #222222);
+
+    text-align: center;
+  }
+
+  .product__details {
+    @include arial-parameters(16px, 16px, 400, $text-color);
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .product__details--bonus {
+    margin: 0 auto;
+    width: 200px;
+    border: none;
+  }
+
+  .product__details--additional {
+    border: none;
+  }
+
+  .product__button {
+    margin-left: 40px;
+    width: 248px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 245px;
+  }
+
+  .product__name {
+    @include oswald-parameters(20px, 21px, 400, #222222);
+  }
+
+  .product__button {
+    margin-left: 40px;
+    width: 168px;
   }
 }
