@@ -1,6 +1,11 @@
 .example {
-  padding: 20px 20px;
   background-color: $bg-example;
+}
+
+.example__wrapper {
+  margin: 0 auto;
+  padding: 20px 20px;
+  width: 280px;
 }
 
 .example__title {
@@ -16,7 +21,7 @@
   @include arial-parameters($text-size, 18px, 400, $text-color);
 }
 
-.exapmle__results {
+.example__results {
   padding: 20px 0;
 }
 
@@ -30,4 +35,53 @@
   margin-bottom: 20px;
 
   @include oswald-parameters(16px, 20px, 400, $title-color);
+}
+
+@media (min-width: $tablet-width-bp) {
+  .example {
+    padding-top: 40px;
+    border-top: 1px solid #e6e6e6;
+    background-image: linear-gradient($bg-content 0, $bg-content 500px, $bg-example 40px);
+  }
+
+  .example__wrapper {
+    padding: 0 20px;
+    width: 708px;
+  }
+
+  .example__title {
+    padding-bottom: 40px;
+
+    @include oswald-parameters(60px, 60px, 400, $title-color);
+
+    text-transform: none;
+  }
+
+  .example__text {
+    @include arial-parameters(16px, 24px, 400, $text-color);
+  }
+
+  .example__price {
+    @include oswald-parameters(20px, 20px, 400, $title-color);
+  }
+
+  .example__comparison {
+    @include oswald-parameters(20px, 20px, 400, $title-color);
+  }
+}
+
+@media (min-width: $desktop-width-bp) {
+  .example {
+    border: none;
+    background-image: linear-gradient($bg-content 0, $bg-content 150px, $bg-example 40px);
+  }
+
+  .example__wrapper {
+    padding: 0 60px;
+    width: 1220px;
+  }
+
+  .example__text {
+    padding-top: 40px;
+  }
 }

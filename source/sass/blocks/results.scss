@@ -21,3 +21,16 @@
 
   text-align: center;
 }
+
+@media (min-width: $tablet-width-bp) {
+  .results__quantity {
+    @include oswald-parameters(30px, 37px, 400, $title-color);
+  }
+
+  .results__index {
+    @include arial-parameters(14px, 14px, 400, $text-color);
+  }
+}
+
+//@media (min-width: $desktop-width-bp) {
+//}

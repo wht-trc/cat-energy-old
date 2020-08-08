@@ -1,13 +1,17 @@
 .navigation {
-  background-color: $bg-content;
+  background-color: transparent;
 }
 
 .navigation__list {
+  display: flex;
+  flex-direction: column;
+
   @include list-decoration();
 }
 
 .navigation__item {
   padding: 20px 0;
+  border-top: solid 1px #e6e6e6;
 }
 
 .navigation__link {
@@ -35,4 +39,64 @@
 
 .navigation__close {
   display: none;
+}
+
+@media (min-width: $tablet-width-bp) {
+  .navigation__list {
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .navigation__item {
+    padding: 10px 0;
+    padding-left: 20px;
+    border-top: none;
+  }
+
+  .navigation__link {
+    display: block;
+    text-align: right;
+
+    @include oswald-parameters(18px, 24px, 400, $title-color);
+
+    font-weight: bold;
+  }
+}
+
+@media (min-width: $desktop-width-bp) {
+  .navigation__list {
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .navigation__item {
+    padding: 10px 0;
+    padding-left: 30px;
+    border-top: none;
+  }
+
+  .navigation__link {
+    display: block;
+    text-align: right;
+
+    @include oswald-parameters($nav-size, 20px, 400, $title-color);
+
+    font-weight: bold;
+  }
+
+  .navigation__link--index {
+    @include oswald-parameters($nav-size, 20px, 400, $bg-content);
+
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+      text-decoration: underline $bg-content;
+    }
+  }
 }

@@ -1,10 +1,14 @@
 .programs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 280px;
+  margin: 0 auto;
   padding: 0 20px;
   background-color: $bg-content;
 }
 
 .programs__item {
-  margin-bottom: 20px;
   background-color: $basic-grey;
 }
 
@@ -19,17 +23,18 @@
 }
 
 .programs__text {
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 20px;
+  padding-bottom: 20px;
 
   @include arial-parameters($text-size, 18px, 400, $text-color);
+
+  border-bottom: solid 1px #d9d9d9;
 }
 
 .programs__button {
   display: block;
   margin: 0 auto;
   margin-left: 20px;
-  margin-top: 20px;
   margin-right: 20px;
   padding: 20px 0;
 
@@ -48,5 +53,48 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width-bp) {
+  .programs {
+    gap: 30px;
+    padding: 0 20px;
+    width: 708px;
+  }
+
+  .programs__item {
+    padding-bottom: 30px;
+  }
+
+  .programs__title {
+    padding-left: 50px;
+
+    @include oswald-parameters(36px, 36px, 400, $title-color);
+  }
+
+  .programs__text {
+    margin: 0;
+    padding: 0 50px;
+
+    @include arial-parameters(16px, 24px, 400, $title-color);
+
+    border-bottom: none;
+  }
+
+  .programs__button {
+    margin-left: 50px;
+    margin-top: 20px;
+
+    @include oswald-parameters(20px, 20px, 400, $title-color);
+  }
+}
+
+@media (min-width: $desktop-width-bp) {
+  .programs {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    width: 1220px;
+    padding: 0 60px;
   }
 }

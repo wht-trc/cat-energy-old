@@ -1,0 +1,51 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 35px;
+
+  @include list-decoration();
+
+  background-color: $basic-grey;
+}
+
+.social__item {
+  padding: 20px 0;
+}
+
+.social__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 22px;
+  height: 22px;
+}
+
+.social__link::after {
+  content: "";
+  position: absolute;
+}
+
+.social__link:active::after {
+  opacity: 0.3;
+}
+
+.social__link--vkontakte::after {
+  //bottom: 16px;
+  //left: 14px;
+  width: 23px;
+  height: 16px;
+  background: url("../img/icon-vk.svg") no-repeat;
+}
+
+.social__link--instagram::after {
+  width: 16px;
+  height: 16px;
+  background: url("../img/icon-insta.svg") no-repeat;
+}
+
+.social__link--facebook::after {
+  width: 22px;
+  height: 22px;
+  background: url("../img/icon-fb.svg") no-repeat;
+}

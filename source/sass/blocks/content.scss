@@ -1,7 +1,15 @@
 .content {
-  width: 320px;
-  margin: 0 auto;
+  //width: $mobile-width;
+  //margin: 0 auto;
   background-color: $bg-content;
+
+  /*@media (min-width: $tablet-width-bp) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width-bp) {
+    width: $desktop-width;
+  }*/
 }
 
 .content__promo {
@@ -23,13 +31,32 @@
 /*.content__map {}*/
 
 .content__title {
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 20px;
+  width: 280px;
   padding-bottom: 40px;
 
   @include oswald-parameters($title-size, $title-size, 400, $title-color);
 
   text-transform: none;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: $tablet-width-bp) {
+    padding: 30px 20px;
+    width: 708px;
+
+    @include oswald-parameters(60px, 60px, 400, $title-color);
+
+    text-transform: none;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width-bp) {
+    padding: 30px 60px;
+    width: 1220px;
+    border: none;
+  }
 }
 
 .content__catalog {
