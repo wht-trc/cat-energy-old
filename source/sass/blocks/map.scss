@@ -4,8 +4,10 @@
 }
 
 .map__text {
-  display: flex;
+  margin: 0 auto;
   padding: 20px 20px;
+  width: 280px;
+  display: flex;
 }
 
 .map__text--inner {
@@ -19,3 +21,28 @@
 .map__adress {
   @include arial-parameters($text-size, 20px, 400, $text-color);
 }
+
+.map__img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width-bp) {
+  .map__text {
+    margin: 0 auto;
+    padding: 20px 70px;
+    width: 608px;
+    justify-content: space-between;
+  }
+
+  .map__invitation {
+    @include oswald-parameters(20px, 21px, 400, $logo-text-color);
+  }
+
+  .map__adress {
+    @include arial-parameters(16px, 20px, 400, $text-color);
+  }
+}
+
+//@media (min-width: $desktop-width-bp) {
+//}

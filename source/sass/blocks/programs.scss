@@ -1,7 +1,9 @@
 .programs {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   gap: 20px;
+  width: 280px;
+  margin: 0 auto;
   padding: 0 20px;
   background-color: $bg-content;
 }
@@ -54,10 +56,15 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet-width-bp) {
   .programs {
     gap: 30px;
-    padding: 0 30px;
+    padding: 0 20px;
+    width: 708px;
+  }
+
+  .programs__item {
+    padding-bottom: 30px;
   }
 
   .programs__title {
@@ -67,6 +74,7 @@
   }
 
   .programs__text {
+    margin: 0;
     padding: 0 50px;
 
     @include arial-parameters(16px, 24px, 400, $title-color);
@@ -82,10 +90,11 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-bp) {
   .programs {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
-    padding: 0 110px;
+    width: 1220px;
+    padding: 0 60px;
   }
 }
