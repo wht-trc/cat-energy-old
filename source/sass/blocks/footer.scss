@@ -14,7 +14,6 @@
 }
 
 .footer__logo {
-  //margin: 0 20px;
   padding-bottom: 20px;
   border-bottom: solid 1px #d9d9d9;
 }
@@ -22,7 +21,6 @@
 .footer__copyright {
   display: flex;
   justify-content: space-between;
-  //margin: 0 20px;
   padding: 20px 0;
   border-top: solid 1px #d9d9d9;
 }
@@ -38,12 +36,10 @@
   }
 
   .footer__logo {
-    //margin: 0 30px;
     border: none;
   }
 
   .footer__copyright {
-    //margin: 0 30px;
     border: none;
   }
 }
@@ -54,12 +50,4 @@
     padding-left: 60px;
     padding-right: 60px;
   }
-
-  /*.footer__logo {
-    margin: 0 110px;
-  }
-
-  .footer__copyright {
-    margin: 0 110px;
-  }*/
 }

@@ -3,9 +3,11 @@
 }
 
 .example__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 280px;
   margin: 0 auto;
   padding: 20px 20px;
-  width: 280px;
 }
 
 .example__title {
@@ -22,16 +24,45 @@
 }
 
 .example__results {
+  display: flex;
+  justify-content: space-around;
   padding: 20px 0;
 }
 
+.example__parameter {
+  display: flex;
+  flex-direction: column;
+}
+
+.example__quantity {
+  padding-bottom: 10px;
+
+  @include oswald-parameters(24px, 24px, 400, $title-color);
+
+  text-align: center;
+}
+
+.example__index {
+  @include arial-parameters(12px, 12px, 400, $text-color);
+
+  text-align: center;
+}
+
 .example__price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+
   @include oswald-parameters($text-size, 20px, 400, $title-color);
 
   text-align: center;
 }
 
 .example__comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   margin-bottom: 20px;
 
   @include oswald-parameters(16px, 20px, 400, $title-color);
@@ -41,15 +72,19 @@
   .example {
     padding-top: 40px;
     border-top: 1px solid #e6e6e6;
-    background-image: linear-gradient($bg-content 0, $bg-content 500px, $bg-example 40px);
+    background-image: linear-gradient($bg-content 0, $bg-content 420px, $bg-example 40px);
   }
 
   .example__wrapper {
-    padding: 0 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
     width: 708px;
+    padding: 0 20px;
   }
 
   .example__title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
     padding-bottom: 40px;
 
     @include oswald-parameters(60px, 60px, 400, $title-color);
@@ -58,14 +93,39 @@
   }
 
   .example__text {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+
     @include arial-parameters(16px, 24px, 400, $text-color);
   }
 
+  .example__results {
+    justify-content: space-between;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 250px;
+  }
+
   .example__price {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
     @include oswald-parameters(20px, 20px, 400, $title-color);
   }
 
+  .example__img {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    margin: 0 auto;
+  }
+
   .example__comparison {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+
     @include oswald-parameters(20px, 20px, 400, $title-color);
   }
 }
@@ -76,12 +136,48 @@
     background-image: linear-gradient($bg-content 0, $bg-content 150px, $bg-example 40px);
   }
 
-  .example__wrapper {
-    padding: 0 60px;
+  .example__wraper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
     width: 1220px;
+    padding: 0 60px;
+  }
+
+  .example__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
   .example__text {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     padding-top: 40px;
+  }
+
+  .example__quantity {
+    @include oswald-parameters(30px, 37px, 400, $title-color);
+  }
+
+  .example__index {
+    @include arial-parameters(14px, 14px, 400, $text-color);
+  }
+
+  .example__price {
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .example__img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    margin: 0 auto;
+  }
+
+  .example__comparison {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
   }
 }

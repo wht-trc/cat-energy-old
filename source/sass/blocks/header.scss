@@ -1,9 +1,9 @@
 .header {
   display: flex;
   flex-direction: column;
+  width: $mobile-width;
   margin: 0 auto;
   padding-top: 12px;
-  width: $mobile-width;
   background-color: $bg-content;
 }
 
@@ -39,10 +39,10 @@
   .header {
     flex-direction: row;
     justify-content: space-between;
+    width: 1220px;
     padding-top: 60px;
     padding-left: 60px;
     padding-right: 60px;
-    width: 1220px;
   }
 
   /*.header__logo {
