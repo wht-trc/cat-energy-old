@@ -34,6 +34,10 @@
   @include oswald-parameters(16px, 20px, 400, $product-color);
 }
 
+.product__name br {
+  display: none;
+}
+
 .product__name--bonus {
   margin: 0;
   padding: 0;
@@ -61,7 +65,7 @@
   text-align: left;
 }
 
-.prosuct__table td {
+.product__table td {
   text-align: right;
 }
 
@@ -89,11 +93,22 @@
 
 @media (min-width: $tablet-width-bp) {
   .product {
+    width: 324px;
     padding-left: 0;
     padding-right: 0;
-    width: 324px;
     background-color: $basic-grey;
     border: none;
+  }
+
+  .product--additional {
+    width: auto;
+    background-color: $bg-content;
+    border: 1px solid #ebebeb;
+    border-bottom: none;
+  }
+
+  .product--additional:last-of-type {
+    border-bottom: 1px solid #ebebeb;
   }
 
   .product--bonus {
@@ -110,15 +125,24 @@
     padding-right: 36px;
   }
 
+  .product__text--additional {
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .product__name {
     margin: 0 auto;
     padding: 0;
     padding-bottom: 20px;
-    width: 150px;
 
     @include oswald-parameters(20px, 24px, 400, #222222);
 
     text-align: center;
+  }
+
+  .product__name br {
+    display: block;
   }
 
   .product__details {
@@ -128,8 +152,8 @@
   }
 
   .product__details--bonus {
-    margin: 0 auto;
     width: 200px;
+    margin: 0 auto;
     border: none;
   }
 
@@ -138,8 +162,13 @@
   }
 
   .product__button {
-    margin-left: 40px;
     width: 248px;
+    margin-left: 40px;
+  }
+
+  .product__button--additional {
+    width: auto;
+    margin-right: 40px;
   }
 }
 
@@ -148,12 +177,32 @@
     width: 245px;
   }
 
+  .product--additional {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 895px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .product__text--additional {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .product__name {
     @include oswald-parameters(20px, 21px, 400, #222222);
   }
 
   .product__button {
-    margin-left: 40px;
     width: 168px;
+    margin-left: 40px;
+  }
+
+  .product__button--additional {
+    width: 245px;
+    height: 20px;
+    margin-right: 0;
   }
 }

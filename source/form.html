@@ -37,29 +37,30 @@
       <section class="content__feeding-program feeding-program">
         <h1 class="feeding-program__title">Подбор программы</h1>
         <p class="feeding-program__text">
-          Заполните анкету, и мы подберем программу питания для вашего кота
+          Заполните анкету, и мы подберем<br> программу питания для вашего кота
         </p>
 
         <form class="feeding-program__form form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="form__fieldset">
+
+          <fieldset class="form__info">
             <legend class="form__legend visually-hidden">Информация о коте</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="name">Имя<sup>*</sup>:</label>
-                <input class="form__text" type="text" id="name" name="name" placeholder="Барсик" required>
+                <input class="form__placeholder form__placeholder--text" type="text" id="name" name="name" placeholder="Барсик" required>
               </li>
               <li class="form__item">
                 <label class="form__label" for="weight">Вес (кг)<sup>*</sup>:</label>
-                <input class="form__text" type="number" id="weight" name="weight" placeholder="7" required>
+                <input class="form__placeholder form__placeholder--text" type="number" id="weight" name="weight" placeholder="7" required>
               </li>
               <li class="form__item">
                 <label class="form__label" for="age">Возраст (лет):</label>
-                <input class="form__text" type="number" id="age" name="age" placeholder="7">
+                <input class="form__placeholder form__placeholder--text" type="number" id="age" name="age" placeholder="7">
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__program">
             <legend class="form__legend visually-hidden">Какая программа питания необходима вашему коту?</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -77,28 +78,29 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+
+          <fieldset class="form__contacts">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--contacts">
               <li class="form__item">
                 <label class="form__label" for="email">E-mail<sup>*</sup>:</label>
-                <input class="form__email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="form__placeholder form__placeholder--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
               </li>
               <li class="form__item">
                 <label class="form__label" for="tel">Телефон<sup>*</sup>:</label>
-                <input class="form__tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                <input class="form__placeholder form__placeholder--tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__comment">
             <legend class="form__legend">Комментарий</legend>
-            <textarea class="form__textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__placeholder form__placeholder--textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__additional">
             <legend class="form__legend">Дополнительно</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--additional">
               <li class="form__item">
                 <input class="form__checkbox visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
                 <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
@@ -117,23 +119,24 @@
               </li>
             </ul>
           </fieldset>
-
           <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__note"><sup>*</sup> — Обязательные поля</p>
         </form>
-
-        <p class="feeding-program__note"><sup>*</sup> — Обязательные поля</p>
       </section>
 
       <section class="content__map map">
         <h2 class="visually-hidden">Адрес компании</h2>
-        <div class="map__text map__text--inner">
-          <p class="map__invitation">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <p class="map__adress">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </p>
+        <div class="map__wrapper">
+          <div class="map__text map__text--inner">
+            <p class="map__invitation">
+              Приглашаем к сотрудничеству дилеров!
+            </p>
+            <p class="map__adress">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </p>
+          </div>
         </div>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4753.709405278361!2d30.316456626640356!3d59.9373092468309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1597621842817!5m2!1sru!2sru" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Месторасположение компании на карте">
       </section>
     </main>

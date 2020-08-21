@@ -77,11 +77,11 @@
 
   .navigation__link {
     display: block;
-    text-align: right;
 
     @include oswald-parameters($nav-size, 20px, 400, $title-color);
 
     font-weight: bold;
+    text-align: right;
   }
 
   .navigation__link--index {
